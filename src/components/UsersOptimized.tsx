@@ -7,15 +7,15 @@ import { withDiagnostics } from "../diagnostics/withDiagnostics";
 import { useBreadcrumbs } from "../breadcrumbs/useBreadcrumbs";
 import { LoadingAnimationWithLabel } from "./spinners/LoadingAnimation";
 
-const usersPath = '/users2';
+const usersPath = '/users-optimized';
 
-export const Users2: React.FC<any> = () => {
+export const UsersOptimized: React.FC<any> = () => {
     const { callCounter, renderCounter } = useRerenderCounter('Users');
     const { setUser } = useContext(UserContext);
     const { update } = useBreadcrumbs([
         <Link to="/">home</Link>,
         <Link to={usersPath}>users</Link>,
-        ""
+        "", // placeholder like
     ]);
     const { id: userId } = useParams();
     const [{ loading, users, selectedUser }, updateState] = useComplexState(

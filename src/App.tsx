@@ -12,7 +12,7 @@ import { Breadcrumb } from "./components/Breadcrumb";
 import { Home } from "./components/Home";
 import { UserMenu } from "./components/UserMenu";
 import { Users } from "./components/Users";
-import { Users2 } from "./components/Users2";
+import { UsersOptimized } from "./components/UsersOptimized";
 import { isDebugMode } from "./diagnostics/withDiagnostics";
 
 function App() {
@@ -32,8 +32,8 @@ function App() {
     { path: "/users/:id", component: Users, label: "User", internal: true },
 
     // more optimized version
-    { path: "/users2", component: Users2, label: "Users (optimized)" },
-    { path: "/users2/:id", component: Users2, label: "User (optimized)", internal: true },
+    { path: "/users-optimized", component: UsersOptimized, label: "Users (optimized)" },
+    { path: "/users-optimized/:id", component: UsersOptimized, label: "User (optimized)", internal: true },
   ]
 
   return (
